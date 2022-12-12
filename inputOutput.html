@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Input / Output</title>
+
+
+    </head>
+    <body>
+        <h1>Ejemplo de entrada y salida</h1>
+
+        <h2>Utilización del método WRITE</h2>
+        <script>
+            document.write('<p>Cadena creada desde JS</p>');
+            document.write(152+39.52);
+        </script>
+        <p><button id="noPulsar" type="button">No pulsar</button></p>
+
+
+        <h2>Utilización del método ALERT</h2>
+        <button id="alerta" type="button">Lanzar alerta</button>
+
+
+        <h2>Utilización de la propiedad innerHTML</h2>
+        <button id="mostrarLista" type="button">Mostrar lista</button>
+        <div id="lista">
+            <h2>Mi lista</h2>
+        </div>
+
+
+        <h2>Utilización de la propiedad VALUE</h2>
+        <button id="calcularEdad" type="button">Calcular Edad</button>
+        <label>Escribe año de nacimiento: <input type="number" min="1900" max="2022" value="2022" id="anyoNac"></label> - Edad:
+        <input id="edad" type="text" value="0" size="4" readonly>
+
+
+        <h2>Utilización del método CONFIRM</h2>
+        <!-- Ventana de confirmación -->
+        <button id="borrarDocumento" type="button">Eliminar documento</button>
+
+
+        <h2>Utilización del método PROMPT</h2>
+        <!-- Ventana de confirmación con posibilidad de escritura -->
+        <button id="solicitarEdad" type="button">Solicitar Edad</button>
+
+
+
+        <script src="/scripts/inputOutput.js"></script>
+    </body>
+</html>

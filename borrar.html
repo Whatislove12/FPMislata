@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .ocultar{
+                display: none;
+            }
+        </style>
+
+        <script>
+            let nombre, apellido;
+            function miSaludo(){
+                alert('Mi saludo');
+            }
+
+            window.onload = function(){
+                document.getElementById('bSaludar').onclick = function() {
+                    //alert('Gracias por venir');
+                    miSaludo();
+                    document.querySelector('h1').classList.toggle('ocultar');
+                }   
+            }
+        </script>
+    </head>
+
+    <body>
+        <!-- JavaScript es un lenguaje de programación interpretado, orientado a objetos y eventos, permite crear aplicaciones para ser ejecutadas -->
+        <!-- Los programas realizados con JavaScript se llaman SCRIPTS -->
+        <!-- Un lenguaje es interpretado, se lee línea a línea y se interpreta una por una y se ejecutan una a una (es decir, si hay un error en la línea 8 hasta que no se llegue a la línea 8 no surgira el error)-->
+        <!-- Un lenguaje compilado pasa por una aplicación que lo analiza y devuelve código ejecutable, el lo contrario al lenguaje interpretado, se suele compilar solo para una máquina concreta por eso no se utiliza en internet nunca el lenguaje compilado -->
+        <!-- Java es un lenguaje semi-compilado, se suele compilar para maquinas virtuales -->
+        <!-- Un cuello de botella es un problema, son donde se realizan las retenciones, puede ser una CPU, la falta de disco, la falta de memoria, etc, un sistema con muchos caminos que ha de pasar a uno solo y baja el paso de información (en internet el cuello de botella es el propio internet, es decir, las conexiones de red)-->
+        <!-- Es un lenguaje orientado a objetos, un objeto es la modelización de un elemento dentro del ordenador (datos, metodos,etc), no nació como tal pero se ha ido deribando hacia ello por lo que tiene ciertas carencias -->
+        <!-- Es un lenguaje orientado a eventos (cosas que van ocurriendo), pasar por encima con el ratón, presionar el botón; crea respuestas frente a acciones -->
+        <!-- Es un lenguaje que no puede crear programas independientes, solo sirve para ser incrustado en un documento HTML (dentro de una página Web) o como un modulo dentro del programa de Java -->
+
+        <!-- Etiqueta importante en JavaScript -- <script></script> -->
+        <!-- Tenía dos atributos: <script language="javascript" type="text/javascript"></script> , pero ya no son necesarios con HTML5 -->
+        <!-- Para designar variables tenemos var y let -->
+
+        <!-- Javascript permite utilizar el conjunto de caracteres Unicode (que tienen 65536 caracteres, incluida la ñ) pero al ser los programadores multilenguajes a la hora de programar unos utilizan un tipo de caracteres y otros otro tipo. lo que puede producir errores de sintacsis y por ello para intentar evitarlo se utiliza el código ASCII de 7 bits que tiene 128 caracteres (donde la ñ no existe y daría error)  -->
+
+        <!-- Javascript es un lenguaje que diferencia entre mayúsculas y minúsculas y es importante llevar bien la sangría en el código -->
+        <!-- Cada instruccion termina con punto y coma (;) pero no es obligatorio, cosa que si que es obligatorio en PHP -->
+        <!-- Javascript como PHP tiene dos tipos de comentarios los simples (una linea: //) y los compuestos(varias lineas: /* */) -->
+
+        <!-- Los identificadores son los nombres que nosotros le asignamos a las cosas o variables, y es mejor ceñirse a al normativa:
+            - Debe empezar por letra, simbolo subrayado(_) o simbolo dolar($) [NUNCA POR NUMEROS] 
+            - El resto de caracteres puede ser cualquiera Unicode
+            - Es posible utilizar secuencias de escape dentro del id (no   es habitual y las teclas de escape empiezan por \uXXXX)
+            - No debe coincidir con una palabra reservada del lenguaje
+            - Deben ser descriptivos, para mejorar la búsqueda
+            - Si id compuesto utilizar la primera palabra en minúscula y la segunda en mayúscula (primerApellido, segundoApellido)
+            - Han de ser cortos, cuanto más escribimos más nos equivocamos
+        -->
+
+        <h1>Primera página con JAVASCRIPT</h1>
+        <input type="button" id="bSaludar" value="Saludar">
+        <br>
+
+        <script>
+            let op1, op2;   //la palabra let: define variables
+                            //op1 es un identificador, poría haber sido nombre (el identificador lo ponemos nosotros)
+                            //op2 es otro identificador, podría haber sido apellidos (tiene que ser identificador de la variable)
+                            /* let nombre, apellidos;
+                            nombre = window.prompt('Introduce tu nombre');     
+                            apellidos = window.prompt('Introduce tu apellido');
+                        
+                            if (nombre=='' || apellidos=='')
+                                document.write('Los datos introducidos no son correctos');
+                            else
+                                document.write('Tu nombre completo es: <br>' +nombre+' '+apellidos+ '</br>'); */
+            op1 = window.prompt('Introduce tu nombre');     
+            op2 = window.prompt('Introduce tu apellido');
+           
+            if (op1=='' || op2=='')
+                document.write('Los datos introducidos no son correctos');
+            else
+                document.write('Tu nombre completo es: <br>' +op1+' '+op2+ '</br>');
+
+            // esto se puede poner también arriba en el head
+            /* document.getElementById('bSaludar').onclick = function() {
+                alert('Gracias por venir');
+                document.querySelector('h1').classList.toggle('ocultar');
+            } */
+
+
+            // Calcular la raíz cuadrada de 99
+            var resultado = Math.sqrt(99);        //Math es un objeto
+            document.write('<br>La raíz cuadrada es: ' + resultado);
+
+
+        </script>
+
+        <p>FIN DE LA EJECUCIÓN</p>
+    </body>
+</html>

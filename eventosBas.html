@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            img{
+                display: block;
+                margin: 20px auto;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>Documento demostración de Eventos <span id="date"></span></h1>
+        <div>
+            <input id="size" type="number" value="400" min="200" max="600" step="25">
+            <input id="resize" type="button" value="Redimensionar">
+        </div>
+        <img width="400px" id="logo" src="/image/logo-tienda.png" alt="Logo Tienda">
+        <input id="updateDate" type="button" value="Actualizar hora">
+
+        <script src="/scripts/eventosBas.js"></script>
+    </body>
+</html>

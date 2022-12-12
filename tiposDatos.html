@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tipos de Datos</title>
+    </head>
+
+    <body>
+        <h1>TIPOS DE DATOS</h1>
+
+        <!-- la programación se divide en datos e instrucciones -->
+        <!-- un programa manipula datos, y necesitamos saber cuales podemos 
+        manipular -->
+        <!-- los datos de php son distintos a los que maneja JS -->
+        <!-- los datos de entrada pueden venir de parte del usuario o de un 
+        archivo que estamos descargando -->
+        <!-- los datos nos proporcionan la siguiente información:
+            -   que tipo de información almacena el dato
+            -   que rango de valores (o tipo de valores) puede introducir o admite
+            -   como se debe de introducir la información (como se debe de escribir)
+            -   que tipo de operaciones se pueden ejecutar (que operaciones permite)
+        -->
+        <!-- JS diferencia dos tipos de datos, 
+            -   datos basicos o primitivos (solo admite un solo valor) 
+                    - son inherentes al texto:
+                        - Números
+                        - Lógicos
+                        - Textos
+            -   datos compuestos, admiten más de un valor (son lo que se llaman objetos o clases)
+                    - se pueden clasificar en:
+                        - Objetos predefinidos por JS (ej: Date(),Math(),etc)
+                        - Objetos del programador, creados por el propio programador
+                        - Objetos del navegador, objetos de JS que se ejecutan en Web
+                    - todos estos son Datos por Referencia
+        -->
+
+        <h2>Datos por valor vs por referencia</h2>
+        <div id="valorReferencia"></div>
+
+
+
+        <h2>Datos Numéricos</h2>
+
+        <button id="bRestar" type="button">Sumar dos números</button>
+        <button id="bConcatenar" type="button">Sumar dos números</button>
+        <button id="bSumar" type="button">Sumar dos números</button>
+
+        <!-- los numeros representan datos numeros, independientemente de que
+        tengan decimales o no -->
+        <!-- literal, es como puedo escribir yo algo en mi ordenador -->
+        <!-- los numeros hay cinco formas de escribir numeros:
+            - literal entero, octales, hexadecimales,etc
+        -->
+        <!-- Enteros (no tienen decimales, son en base 10, se permiten 10 digitos(0..9), 
+            pueden utilizar el signo positivo o negativo(-) y no utilizan puntos ni comas 
+            para separar los bloques de miles) -->
+        <!-- Octales (son en base 8, siempre deben comenzar obligatoriamente
+            por 0, solo permiten 8 digitos (0..7)), si aparecen los digitos 8 y 0 ya no son 
+            octales -->
+        <!-- Hexadecimales (son en base 16, se permiten 10 digitos (0..9), y las letras
+            (A..F), comienzan por 0x.. (0x12A, ), también admiten positivo y negativo(-)) -->    
+        <!-- Flotantes (son lo que llamamos numeros decimales, no admite el punto para los millares,
+            la separacion de los decimales se realiza con punto(.)[nunca con coma(,)], admiten 
+            positivos y negativos(-)) -->
+        <!-- Notación Cientifica (son numeros muy grandes, admiten positivos y negativos(-),
+            tienen dígitos obligatorios +/- 25.75e+7 [e=exponente]) -->
+
+        <!-- tiene valores especiales:
+            - infinity: puede ser infinito positivo(+) o infinito negativo(-) 
+                ej: 5/0 => infinito (en JS maneja el infinito) (pero en una calculadora da ERROR)
+            - NaN (Not a Numeric): normalmente es un ERROR cuando se intenta manejar algo como un 
+            número pero no lo es 
+                ej: Pepe/2  (Pepe no es un número y dará NaN)
+        -->   
+    
+        <div id="numericos"></div>
+
+
+
+        <h2>Datos Lógicos</h2>
+        <!-- datos booleanos -->
+        <!-- solo admiten los valores verdadero(true) o falso (false)-->
+        <!-- en JS, el valor 0 es false y cualquier otro valor es true -->
+
+        <div id="logicos"></div>
+
+
+
+        <h2>Cadenas de texto</h2>
+        <!-- se llaman string, y es cualquier conjunto de caracteres -->
+        <!-- toda cadena de texto tiene que estar entrecomillada (("...") o ('...')) -->
+        <!-- se comienza y se acaba con el mismo tipo de comillas, dentro se pueden 
+        ponet otro tipo de comillas pero no las mismas -->
+        <!-- los string no se puedn dividir van en una sola linea -->
+        <!-- cadena vacia, no contiene ningún elemento o simbolo, ("") o ('') [sin espacio,
+            ni siquiera en blanco] -->
+        <!-- cadena no vacia, (" ") o (' ') [se deja un espacion en blanco]-->
+        <!-- secuencias de escape, hay simbolos que no tienen representación o que el teclado
+            no lo tiene o lo tiene pero no se pueden representar, siempre van precedidas de
+            una barra invertida (\) 
+                - Tecla retroceso: \b
+                - Avance de linea: \n
+                - Tecla del tabulador: \t
+                - Retorno carro: \r
+                - Comillas dobles: \"
+                - Comillas simples: \'
+                - Caracter unicode: \ uXXXX 
+                - Dobre barra : \\ 
+            -->
+        <!-- Conversines de tipos -->
+        <!-- Hay dos tipos de conversiones:
+                - Implicitas/Automaticas
+                - Explicitas/Forzadas por el programador  
+        -->   
+        <!-- De numeros a cadenas de texto, si el numero aparece dentro de una cadena de 
+            texto se transforma automaticamente en texto
+                ej: 25 + "1" = "251" (automatico)
+                ej: String(25)+'1' = "251"  (forzado) [String(number)]
+
+            método toString([base]) se indica en que formato quiero que lo transforme
+                var num = 12345;
+                var txt = num.toString(16)   
+            método toFixed(n), redondea a una cantidad de decimales a nivel visual  
+                n = num de decimales a redondear
+            método toExponential(n), notacion cientifica  
+                n = num de digitos a decimales
+            método toPrecision(nd), indicas la cantidad de digitos, y se adapta en decimal 
+                o cientifica para adaptarse a esa cantidad de digitos 
+        -->
+
+        <!-- De cadenas de texto a numeros
+            - automaticamente
+                var txt= '125.39';
+                var num = txt - 0;
+                num = 125.39;
+        -->
+        <!-- parseFloat y parseInt para convertir cadenas textos a numeros, ya sean enteros
+             o en flotante /cientifico
+        -->
+
+        <!-- Conversion de booleanos a string, con true o false -->
+
+        <div id="strings"></div>
+
+        <button id="bSumarHex" type="button">Sumar dos hexadecimales</button>
+
+        <h2>Objetos</h2>
+        <!-- Un objeto es un elemento complejo, con dos componentes: propiedades(caracteristicas)
+        y metodos (acciones) -->
+        <!-- Los objetos pueden venir por varios sitios por el lenguaje toString, especificos del 
+        navegador o del programador creados por el o librerias creadas por otro -->
+        <!-- para acceder a un miembro de un objeto se utiliza el punto(.) (objeto.nombre_propiedad), pero
+        JS tiene otra sintaxis o de matiz asociativa (objeto['nombre_propiedad']) pero se utiliza menos -->
+        <!-- los arrays asociativos se utilizan mucho en PHP y menos en JS -->
+        <!-- JS analiza todo el documento que se llama DOM donde todo o cada elemento es un objeto -->
+        <!-- Objeto Window, Objeto Location, Objeto Document son elementos intrínsecos del navegador DOM -->
+        <!-- Los objetos propios del navegador son los que creamos nosotros mismos formando librerías -->
+        
+
+
+        <div id="objects"></div>
+
+
+
+        <script src="/scripts/tiposDatos.js"></script>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/css/escribirJS.css">
+        <!-- Script en cabecera -->
+        <!-- La librería se puede colocar en la cabecera o en el final del documento -->
+        <!-- si se enlaza JS y CSS, CSS debe estar delante de JS ya que JS si puede
+        necesitar de CSS pero CSS no necesita de JS  -->
+        <script src="/scripts/escribirJS.js"></script>
+        <script>
+            //Aquí las variables se pueden poner sin que den error
+            var p1=20, p2=30;
+            /* Aquí tenemos una función definida pero puede estar o no utilizada */
+            function calcularTotal(prd1, prd2){
+                return (prd1+prd2)*1.21;
+            }
+        </script>
+    </head>
+
+    <body>
+        <!-- Para escribir código JS tenemos varias posibilidades -->
+        <!-- Hay 3 opciones -->
+        <!-- Escribir JS en la cabecera de nuestro documento (head),
+        para funciones o variables que se utilizaran posteriormente -->
+        <!-- Escribir JS dentro del cuerpo del documento, para código que
+        se ejecutará durante la carga del documento, la que menos se debe 
+        de utilizar -->
+        <!-- Escribir JS al final del documento para sustituir a la cabecera
+        (head) del documento -->
+        <!-- Escribir JS con un documento externo, que se puede compartir con
+        todas las páginas formando lo que se llama una libreria -->
+
+
+        <h1>Escribir Código JavaScript</h1>
+        <!-- Script en el cuerpo del documento -->
+        <script>
+            var fechaActual = new Date();
+            document.write('<p>La fecha de hoy es: ' + fechaActual +'</p>');
+        </script>
+
+        <h2>Calcular precios de los productos</h2>
+        <script>
+            /* var p1 = 20;
+            var p2 = 30; */
+            //otra forma=> var p1=20, p2=30; y se pueden escribir arriba en la cabecera
+            document.write('<ul><li>Producto1: '+ (p1*1.21) +'€</li><li>Producto2: '+ (p2*1.21) +'€</li></ul>');
+
+        </script>
+
+        <h2>Calcular el total del producto</h2>
+        <p>El total del producto es: 
+            <script>
+                document.write(calcularTotal(p1,p2))
+            </script>
+        </p>
+        
+        <footer></footer>
+        <!-- Por lo general, se suele enlazar la libreria al final del documento -->
+        <script src="/scripts/escribirJS.js"></script>
+
+        <!-- Script al final del documento -->
+        <script>
+            /* Aquí no se pueden poner las variables porque darán error
+            var p1=20, p2=30; */
+        </script>
+    </body>
+</html>
