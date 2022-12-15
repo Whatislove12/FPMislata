@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/calculadoraCar.css">
+    <title>CalculadoraCar</title>
+</head>
+<body>
+    <div class="todoContenido">
+    <div class="contenedor">
+        <div class="entrada">
+            <label>Operaor 1</label>
+            <input id="op1" type="text"  value="0">
+        </div>
+        <div class="entrada">
+            <label>Operaor 2</label>
+            <input id="op2" type="text"  value="0">
+        </div>
+        <div class="buttones">
+            <input id="opSuma" type="button" value="+">
+            <input id="opResta" type="button" value="-">
+            <input id="opProducto" type="button" value="*">
+            <input id="opDivision" type="button" value="/">
+        </div>
+        <div>
+            <input id="resultado" type="text" value=""readonly>
+        </div>
+    </div>
+    
+    <div class="convertor">
+        <div class="entrada">
+            <label>Moneda 1</label>
+            <input id="mon1" type="text" value="1" placeholder="0">
+        </div>
+        <div class="buttones">
+            <input id="usd" type="button" value="$">
+            <input id="gbp" type="button" value="£">
+            <input id="jpy" type="button" value="¥">
+        </div>
+        <div>
+            <input id="mon2" type="text" value=""readonly>
+        </div>      
+    </div>
+
+    <div class="convertor2">
+        <div class="entrada">
+            <label>Moneda 1</label>
+            <input id="moneda1" type="text" >
+        </div>
+        <div class="buttones">
+            <button id="intercambio" type="button" ></button>
+        </div>
+        <div class="entrada">
+            <label>Moneda 2</label>
+            <input id="moneda2" type="text" value="" placeholder="0">
+        </div>
+    </div>
+
+</div>
+
+
+<script src="/scripts/calculadoraCar.js"></script>
+</body>
+</html>

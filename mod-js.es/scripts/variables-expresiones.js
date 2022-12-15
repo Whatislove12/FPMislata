@@ -17,6 +17,11 @@ function verlista() {
     document.write('</ul><hr>');
 }
 
+    let cuenta = 0;
+
+
+
+
 /* codigo principal del scrip  */ 
 
 document.write('<h2>Codigo del script principal</h2>');
@@ -35,3 +40,46 @@ for (var i=0;i<listaTecnologias.length;i++) {
 verlista() 
 verlista() 
 verlista() 
+
+
+
+/* constante */
+
+const MAXIMO = 100;
+const COLOR_BASE = '#fff'; 
+const COLOR_FONDO = '#000';
+
+var divConstante = document.getElementById('constantes');
+divConstante.style.color = COLOR_BASE;
+divConstante.style.backgroundColor = COLOR_FONDO;
+divConstante.style.minHeight = MAXIMO+'px';
+divConstante.style.innerHTML = 'TEXTO DE EJEMPLO';
+
+
+var operadores = document.getElementById('operadores');
+operadores.innerHTML = '<h3>Aritmeticos</h3>';
+var num = -8;
+operadores.innerHTML += 'valor de num: '+num+'<br>';
+num = -(num-2);
+operadores.innerHTML += 'Valor de nim cambiado de signo: '+num+'<br>';
+operadores.innerHTML += 'Sumando 9 a num: '+(num+9)+'<br>';
+num = num -7;
+operadores.innerHTML += 'restando 7: '+num+'<br>';
+operadores.innerHTML += 'dividiendo por 3: '+(num / 3)+'<br>';
+operadores.innerHTML += 'restando 7: '+(num / 4)+'<br>';
+operadores.innerHTML += 'modulo 3: '+(num % 3)+'<br>';/* показывает остаток 3/3= 0 */
+num++;
+operadores.innerHTML += 'Valor de num antes de incrimentarlo: '+num+' <br>';
+operadores.innerHTML += 'Num incrimentado: '+num+'<br> ';
+num--;
+operadores.innerHTML += 'Num descrimentado: '+num+'<br> ';
+operadores.innerHTML += 'Valor de num despues de incrimentarlo: '+num+' <br>';
+
+var num1 = 123;
+var num2 = 75;
+
+var resultado = num1 - num2;
+operadores.innerHTML += 'Num1: '+num1+' Num2: '+num2+' Resultado: '+resultado+'';
+
+/* calculadora ***********************/
+

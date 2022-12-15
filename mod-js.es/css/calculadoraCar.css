@@ -1,0 +1,14 @@
+body {
+    height: 100vh;
+    width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.todoContenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
