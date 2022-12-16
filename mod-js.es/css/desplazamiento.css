@@ -2,7 +2,22 @@
     text-align: center;
     margin-top: 30px;
     }
+    button {
+        background-color: rgb(27, 24, 24);
+        color: white;
+        border-radius: 7px;
+        border: 1px solid rgb(255, 255, 255);
 
+    }
+    button:hover {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border-radius: 7px;
+        border: 1px solid black;
+    }
+    button:active {
+        background-color: rgb(215, 195, 247);
+    }
 .elementos {
     display: flex;
     flex-wrap: wrap;
