@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrucciones de flujo</title>
+    <link rel="stylesheet" href="/css/instrucciones-flujo.css">
+</head>
+<body>
+    <h1>Instrucciones de flujo</h1>
+    <div class="if">
+        <h2>Instrucciones de tipo IF</h2>
+        <p>Introduce un valor numérico positivo: <input type="text" id="valorNumerico"> <input type="button" id="validarValorNumerico" value="Validar"> <span id="errorValorNumerico" class="error"></span></p>
+        <p>Introduce dos valores positivos: <input type="text" id="valorNum1" value="0"> <input type="text" id="valorNum2" value="0"> <input type="button" id="calcular" value="calcular"> <output id="resultadoCalculo">0</output> <span id="errorCalcular" class="error"></span></p>
+        <p>Introduce un valor entre el 1 y el 30 <input id="valorIntroducido" type="text"> <input type="button" id="validarValorIntroducido" value="validar"><span id="resultadoValidarValorIntroducido"></span></p>
+    </div>
+    <div class="switch">
+        <h2>Instrucciones de tipo SWITCH</h2>
+        <p>Operacion: <input id="operacion" type="text"> - (S)umar, (R)estar, (M)ultiplicar, (D)ividir, (I)ntercambiar,(C)ambiar</p>
+        <p>Operando1: <input type="text"  id="operando1"></p>
+        <p>Operando2: <input type="text"  id="operando2"></p>
+        <p><input type="button" id="calcularOperacion" value="operar"></p>
+
+    </div>
+
+    <div class="while">
+        <h2>Entradas</h2>
+        <input type="number" id="num1" min="0" max="10" value="0"> <br>
+        <input type="number" id="num2" min="0" max="10" value="0"> <br>
+        <input type="number" id="num3" min="0" max="10" value="0"> <br>
+        <input type="number" id="num4" min="0" max="10" value="0"> <br>
+        <input type="number" id="num5" min="0" max="10" value="0"> <br>
+        <input type="button" id="buscarPares" value="Buscar Pares"> <br>
+        <output id="numPares">0</output>
+
+    </div>
+
+
+    <script src="/scripts/instrucciones-flujo.js"></script>
+</body>
+</html>

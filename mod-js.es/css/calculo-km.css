@@ -1,0 +1,52 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 600px;
+    margin:20px auto;
+    padding:10px;
+    border:1px solid black;
+}
+
+div.content {
+    display:flex;
+    gap:10px;
+    justify-content: space-between;
+}
+
+div.panIzq {
+    width: 20%;
+}
+
+div.campo {
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+label {
+    font-weight: 600;
+}
+
+div.panDch {
+    width:78%;
+}
+table {
+    width:100%;
+    border-spacing: 5px;
+}
+table th {
+    width:25%;
+}
+input,output {
+    width:100%;
+    display:inline-block;
+}
+output {
+    border:1px solid black;
+
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/tareaDeConsumo.css">
+    <title>tarea De Consumo</title>
+</head>
+<body>
+    <div class="contenido">
+        <div class="cabezera">
+            <p>km: <input id="km" type="text" value="50"></p>
+            <p>€/litro: <input id="precio" type="text" value="2.3"></p>
+            <button id="calcular">calcular</button>
+        </div>
+        <div id="tabla">
+            <table>
+                <tr>
+                    <th>Velocidad</th>
+                    <th>Consumo litro</th>
+                    <th>Tiempo</th>
+                    <th>Coste</th>
+                </tr>
+                <tr>
+                    <td><input type="text" id="tr11" value="101"></td>
+                    <td><input type="text" id="tr12" value="5.3"></td>
+                    <td><input id="tiempo1" type="text"></td>
+                    <td><input id="coste1" type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="tr21" value="50.3"></td>
+                    <td><input type="text" id="tr22" value="2.9"></td>
+                    <td><input id="tiempo2" type="text"></td>
+                    <td><input id="coste2" type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="tr31" value="201"></td>
+                    <td><input type="text" id="tr32" value="20.1"></td>
+                    <td><input id="tiempo3" type="text"></td>
+                    <td><input id="coste3" type="text"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="/scripts/tareaDeConsumo.js"></script>
+</body>
+</html>

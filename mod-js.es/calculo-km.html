@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULO KM</title>
+    <link rel="stylesheet" href="/css/calculo-km.css">
+</head>
+<body>
+    <main>
+        <h1>Calculo de viajes</h1>
+        <div class="content">
+            <div class="panIzq">
+                <div class="campo">
+                    <label for="km">Kilómetros: </label>
+                    <input type="number" id="km" min="0" max="99999" step="1">
+                </div>
+                <div class="campo">
+                    <label for="euro">€/litro: </label>
+                    <input type="number" id="euro" min="0" max="99999" step="0.01">
+                </div>
+            </div>
+
+            <div class="panDch">
+                <table>
+                    <tr>
+                        <th>Velocidad</th>
+                        <th>Consumo</th>
+                        <th>Tiempo</th>
+                        <th>Coste</th>
+                    </tr>
+                    <tr>
+                        <td><input type="number" min="0" max="99999" step="1" id="velocidad1" value="0"></td>
+                        <td><input min="0" max="99999" type="number" step="0.01" id="consumo1" value="0"></td>
+                        <td><output id="tiempo1">0</output></td>
+                        <td><output id="coste1">0</output></td>
+                    </tr>
+                    <tr>
+                        <td><input min="0" max="99999" type="number" step="1" id="velocidad2" value="0"></td>
+                        <td><input type="number" min="0" max="99999" step="0.01"  id="consumo2" value="0"></td>
+                        <td><output id="tiempo2">0</output></td>
+                        <td><output id="coste2">0</output></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" min="0" max="99999" step="1"  id="velocidad3" value="0"></td>
+                        <td><input type="number" min="0" max="99999" step="0.01" id="consumo3" value="0"></td>
+                        <td><output id="tiempo3">0</output></td>
+                        <td><output id="coste3">0</output></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                        <input type="button" id="bCalcular" value="Calcular Viaje">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </main>
+    <script src="/scripts/calculo-km.js"></script>
+</body>
+</html>
