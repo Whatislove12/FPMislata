@@ -88,6 +88,17 @@ img {
     display: flex;
     flex-direction: column;
 }
+#alumnoAprob, #alumnoSuspend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#alumnoAprob>span, #alumnoSuspend>span {
+    border: 1px solid black;
+    padding: 5px;
+
+}
 
 /* #alumnoSuspend, #alumnoAprob {
     border: 1px solid black;

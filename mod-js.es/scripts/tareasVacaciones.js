@@ -45,7 +45,7 @@ document.getElementById('crearPiramide').onclick = function(ev) {
     div.innerHTML = '';
 
     do {
-        resultado = selda + '' + (++deNum);
+        resultado = selda + ' ' + (++deNum);
         selda = resultado;
         div.innerHTML += selda;
     }
@@ -120,6 +120,8 @@ document.getElementById('crearLista').onclick = function(ev) {
     var notaAlumno = Number(document.getElementById('notaAlumno').value);
     var alumnoAprob = document.getElementById('alumnoAprob');
     var alumnoSuspend = document.getElementById('alumnoSuspend');
+    var error = document.getElementById('textoError6');
+
 
 
   /*   alumnoAprob = [
@@ -133,10 +135,19 @@ document.getElementById('crearLista').onclick = function(ev) {
     ]
  */
 
-    if (notaAlumno>50)  {
-        alumnoAprob.innerHTML += nombreAlumno +' '+ notaAlumno + '<br>';
+error.innerHTML = '';
+if (nombreAlumno=='' || isNaN(notaAlumno) || notaAlumno>100 || notaAlumno<0) {
+    error.innerHTML = 'hay que entroducir un nombre y un numero de 0 a 100'
+}
+    else {
+        if (notaAlumno>=50)  {
+            alumnoAprob.innerHTML += '<span> '+nombreAlumno+' ('+notaAlumno+')</span>';
+
+        }
+            else {alumnoSuspend.innerHTML += '<span> '+nombreAlumno+' ('+notaAlumno+')</span>';}
+        
     }
-        else alumnoSuspend.innerHTML += nombreAlumno +' '+ notaAlumno + '<br>';       
+    
 };
 
 
