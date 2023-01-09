@@ -21,9 +21,6 @@ document.getElementById('derecha').onclick = function(ev) {
 
     document.getElementById('elem1').src =  aux1;
 
-
-
-
 };
 document.getElementById('isquerda').onclick = function(ev) {
     var aux1;
@@ -111,6 +108,11 @@ document.getElementById('columna2').onclick = function(ev) {
 document.getElementById('temporizador').onclick = function(ev) {
     temporizador = setInterval(columna2,1000);
 
-}
+};  /* no se como hacer */ 
+
+
+
+
+
 
         

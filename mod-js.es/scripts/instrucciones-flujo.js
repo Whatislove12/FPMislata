@@ -120,3 +120,65 @@ document.getElementById('buscarPares').onclick = function (ev) {
     document.getElementById('numPares').innerHTML = numPares;
 
 };
+
+document.getElementById('bContarNumeros').onclick = function(ev) {
+    var contador = 0;
+    var entrada;
+    do {
+        entrada = Number(prompt('introduce un valor numerico'));
+        if (!isNaN(entrada)) contador ++;
+    } while (!isNaN(entrada));
+    document.getElementById('numerosContados').innerHTML = contador;
+};
+
+
+document.getElementById('numTabla').onchange = function(ev) {
+    var numTabla = document.getElementById('numTabla').value;
+    var div = document.getElementById('tablaMultiplicar');
+    div.innerHTML = '';
+
+
+    if (numTabla == parseInt(numTabla))
+        for (let i=1;i<=10 ;i=i+1)  
+            div.innerHTML += i + 'X' + numTabla + '=' + (i*numTabla) +'<br>';
+        
+/*             if (numTabla == parseInt(numTabla)) {
+                let i=1;
+                while (i<=10) {
+                    div.innerHTML += i + 'X' + numTabla + '=' + (i*numTabla) +'<br>';
+                    i++;
+                }
+            } */
+
+};
+
+
+document.getElementById('bCargarImagenes').onclick = function(ev) {
+    var nombreImagenes = [
+        'num1.jpg',
+        'num2.jpg',
+        'num3.jpg',
+        'num4.jpg',
+        'num5.jpg',
+        'num6.jpg'
+    ];
+
+/*     var div = document.getElementById('imagenesActuales');
+    div.innerHTML = '';
+    for (let ruta of nombreImagenes)
+        div.innerHTML += '<img src="/image/'+ruta+'">' */
+
+/*         var div = document.getElementById('imagenesActuales');
+        div.innerHTML = '';
+        for (let ruta of nombreImagenes) {
+            if (ruta == 'num3.jpg') break;
+            div.innerHTML += '<img src="/image/'+ruta+'">'
+        } */
+
+        var div = document.getElementById('imagenesActuales');
+        div.innerHTML = '';
+        for (let ruta of nombreImagenes) {
+            if (ruta == 'num1.jpg' || ruta == 'num5.jpg') continue;
+            div.innerHTML += '<img src="/image/'+ruta+'">'
+        }
+};

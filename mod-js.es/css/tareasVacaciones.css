@@ -1,0 +1,142 @@
+.buttons {
+    text-align: center;
+    margin-top: 30px;
+    }
+    button {
+        font-size: 1.5rem;
+        background-color: rgb(27, 24, 24);
+        color: white;
+        border-radius: 7px;
+        border: 1px solid rgb(255, 255, 255);
+        width: 100px;
+        height: 40px;
+
+    }
+    button:hover {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border-radius: 7px;
+        border: 1px solid black;
+    }
+    button:active {
+        background-color: rgb(215, 195, 247);
+    }
+.elementos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    gap: 50px;
+    margin-top: 50px;
+}
+#elem1, #elem2, #elem3, #elem4, #elem5, #elem6 {
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    text-align: center;
+}
+img {
+    width: 200px;
+    height: 200px;
+} 
+
+.piramide, .sumaPar, .contadorNum, .listadoAlumnos, .tareaTabla, .DNI, .divisores, .grafico {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0;
+    border-top: 1px dotted gray;
+}
+
+.headerTarea {
+    display: flex;
+    gap: 20px;
+    width: 600px;
+}
+    #headerTarea8{flex-direction: column; gap: 0;}
+.mainTarea {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+    #mainTarea6{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #mainTarea7 {align-items: center;}
+.footerTarea {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+.footerTarea>span {
+    font-style: italic;
+}
+
+.error {
+    color: red;
+    font-weight: 600;
+}
+
+/* tarea numero 6 ***************************************************** */
+
+
+#listSuspend, #listAprob {
+    display: flex;
+    flex-direction: column;
+}
+
+/* #alumnoSuspend, #alumnoAprob {
+    border: 1px solid black;
+    padding: 30px;
+} */
+
+/* tarea numero 7 ***************************************************** */
+
+
+table td {
+    border: 1px solid black;
+    padding: 20px;
+}
+table {
+    margin-top: 50px;
+    border: 1px solid black;
+}
+
+
+/* tarea numero 8 ***************************************************** */
+
+    #letraNIE {width: 20px;}
+    #numDNI {width: 100px;}
+    #obtenerNum {margin-left: 15px;}
+    #letraObten {font-size: 1.5rem;}
+    .ParLetraObten {font-size: 1.5rem; text-align: center;}
+
+
+/* tarea numero 9 **************************************************** */
+
+
+/* tarea numero 10 *************************************************** */
+
+#numGraf0{text-align: center; width: 20px; height: 20px; background-color: blue;}
+#numGraf1{text-align: center; width: 20px; height: 50px; background-color: blue;}
+#numGraf2{text-align: center; width: 20px; height: 100px; background-color: blue;}
+#numGraf3{text-align: center; width: 20px; height: 150px; background-color: blue;}
+#numGraf4{text-align: center; width: 20px; height: 200px; background-color: blue;}
+#numGraf5{text-align: center; width: 20px; height: 250px; background-color: blue;}
+#numGraf6{text-align: center; width: 20px; height: 300px; background-color: blue;}
+#numGraf7{text-align: center; width: 20px; height: 350px; background-color: blue;}
+#numGraf8{text-align: center; width: 20px; height: 400px; background-color: blue;}
+#numGraf9{text-align: center; width: 20px; height: 450px; background-color: blue;}
+
+#numGrafs {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    height: 500px;
+    gap: 50px;
+    align-items: flex-end;
+}
