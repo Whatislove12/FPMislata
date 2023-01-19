@@ -1,0 +1,26 @@
+#numero {
+    width:525px;
+    display:flex;
+    justify-content: space-between;
+    margin-top:20px;
+}
+
+img {
+    width:100px;
+}
+
+#secuencia {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:10px 0.2%;
+    justify-content: flex-start;
+}
+
+#secuencia>span {
+    display:inline-block;
+    width:9%;
+    text-align:center;
+    border:1px solid black;
+    padding:2px;
+}

@@ -42,7 +42,7 @@ img {
     height: 200px;
 } 
 
-.piramide, .sumaPar, .contadorNum, .listadoAlumnos, .tareaTabla, .DNI, .divisores, .grafico {
+.piramide, .sumaPar, .contadorNum, .listadoAlumnos, .tareaTabla, .DNI, .divisores, .grafico, .tareaConversor {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -114,7 +114,7 @@ table td {
 }
 table {
     margin-top: 50px;
-    border: 1px solid black;
+    border-collapse: collapse;
 }
 
 
@@ -150,4 +150,21 @@ table {
     height: 500px;
     gap: 50px;
     align-items: flex-end;
+}
+
+
+/* tarea numero 11 *************************************************** */
+
+.buttones>button {
+    width: 50px;
+    height: 50px;
+}
+#tarea11{
+    width: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+#tarea11>input {
+    height: 20px;
 }

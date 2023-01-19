@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto programador</title>
+    <link rel="stylesheet" href="/css/objeto-programador.css">
+</head>
+<body>
+    <h1>CLASES DE PROGRAMADOR</h1>
+    <form>
+        <div id="info">
+            <div>
+                <label>ID</label>
+                <input type="text" id="id">
+            </div>
+            <div>
+                <label>Nombre</label>
+                <input type="text" id="nombre">
+            </div>
+            <div>
+                <label>Descripcion</label>
+                <input type="text" id="descripcion">
+            </div>
+            <div>
+                <label>Precio unidad</label>
+                <input type="text" id="precio">
+            </div>
+            <div>
+                <label>IVA</label>
+                <input type="text" id="iva">
+            </div>
+            <div>
+                <label>Stock</label>
+                <input type="text" id="stock">
+            </div>
+            <div>
+                <label>Stock Minimo</label>
+                <input type="text" id="stockMin">
+            </div>
+            <div>
+                <label>Activo</label>
+                <input type="text" id="activo">
+            </div>
+            <div>
+                <label>Fecha</label>
+                <input type="text" id="fecha">
+            </div>
+        </div>
+        <div id="accion">
+            <button id="bReset" type="button">Borrar Datos</button>
+            <button id="bAgregar" type="button">Agregar producto</button>
+            <button id="bActualizar" type="button">Actualizar producto</button>
+            <button id="bLeer" type="button">Buscar producto</button>
+            <button id="bEliminar" type="button">Eliminar producto</button>
+
+
+        </div>
+    </form>
+    <h2>LISTA DE PRODUCTOS ACTUALES</h2>
+    <div id="lista">
+
+
+    </div>
+    <script src="/scripts/producto.js"></script>
+    <script src="/scripts/objeto-programador.js"></script>
+</body>
+</html>

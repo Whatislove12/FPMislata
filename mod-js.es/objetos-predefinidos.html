@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos predefinidos</title>
+    <link rel="stylesheet" href="/css/objetos-predefinidos.css">
+</head>
+<body>
+    <h1>Objetos predefinidos</h1>
+    <h2>Booleanos</h2>
+    <div id="booleanos"></div>
+    <h2>Numéricos</h2>
+    <div id="numericos"></div>
+    <h2>Matemáticos</h2>
+    <div id="matematicos"></div>
+    <div id="gasolina">
+        Litros: <input type="number" id="litros" step="0.1" value="1"> -
+        PVP/litro: <input type="number" id="pvpl" step="0.001" value="">
+        <input type="button" value="Calcular Precio" id="bCalcularGasolina"> = 
+        <input type="text" readonly id="pvp"> 
+        <input type="text" readonly id="iva"> 
+        <input type="text" readonly id="pvptotal"> 
+    </div>
+    <h2>Cadenas de texto</h2>
+    <div id="cadenasTexto"></div>
+    <h2>Conjunto de datos</h2>
+    <div id="arrays"></div>
+    <h2>Fechas</h2>
+    <div id="fechas">
+        <input type="date" id="fechaNac" >
+        <span id="edad"></span>
+        <br>
+        <input type="number" id="dias" min="0" value="0" step="1">
+        <span id="fechaFutura"></span>
+    </div>
+    <h2>Expresiones regulares</h2>
+    <div id="expRegulares">
+        <p>Expresion regular: <input type="text" id="expresion" size="40"></p>
+        <p>Elemento a validar: <input type="text" id="texto" size="40"></p>
+        <p><input type="button" id="bValidar" value="Validar"></p>
+        <p><input type="button" id="bLimpiar" value="Limpiar"></p>
+        <div id="log"></div>
+    </div>  
+
+    <script src="/scripts/objetos-predefinidos.js"></script>
+</body>
+</html>

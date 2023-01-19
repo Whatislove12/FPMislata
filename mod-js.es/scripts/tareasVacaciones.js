@@ -248,8 +248,6 @@ document.getElementById('clcularDiv').onclick = function (ev) {
             divisores.innerHTML +=i +' ';
         }
     }
-    var ejemplo =(12%10);
-    console.log(ejemplo)
 };
 
 
@@ -278,3 +276,27 @@ document.getElementById('clcularGraf').onclick = function (ev) {
 
 };
 
+
+// tarea numero 11 *****************************************************
+
+
+document.getElementById('ConvetDer').onclick = function(ev) {
+    var euro = Number(document.getElementById('numEuro').value);
+    var peseta = document.getElementById('numPeseta');
+    peseta.value = '' 
+
+    if (!isNaN(euro))
+    document.getElementById('numPeseta').value = Math.round(euro*166.386)
+    else alert('error')
+    };
+
+    document.getElementById('ConvetIzq').onclick = function(ev) {
+    var peseta = Number(document.getElementById('numPeseta').value);
+
+    document.getElementById('numEuro').value = Math.round(peseta*0.006010121*100)/100
+};
+
+
+
+var numerorandom = Math.random(1234);
+console.log(numerorandom)

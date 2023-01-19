@@ -1,0 +1,31 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+h1, h2, h3 {
+    font-size: 1.75rem;
+    text-align: center;
+}
+form {
+    width: 800px;
+    padding: 20px;
+    margin: 30px auto;
+    border: 1px solid black;
+    
+}
+form #info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+}
+form #info>div {
+    width: 32%;
+
+}
+form #info>div>* {
+    display: block;
+    width: 100%;
+}
