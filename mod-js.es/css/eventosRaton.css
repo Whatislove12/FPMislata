@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    margin: 30px 300px 30px 20px;
+}
+p{
+    margin: 2rem 0.5rem;
+    line-height: 1.5;
+}
+
+#infoRaton {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 280px;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #fff;
+}
+
+#infoRaton ul {
+    list-style: none;
+
+}
+
+#infoRaton ul>li{
+    margin-left: 10px;
+}
+#infoRaton ul>li>label{
+    margin-right: 0.5rem;
+}
+
+#bSubir {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+}
+#bSubir.visible {
+    visibility: visible;
+    opacity: 0.5;
+}
+#bSubir.visible:hover {
+    opacity: 1;
+    cursor: pointer;
+}

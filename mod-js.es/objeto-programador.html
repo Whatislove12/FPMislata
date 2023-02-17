@@ -1,69 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Objeto programador</title>
-    <link rel="stylesheet" href="/css/objeto-programador.css">
-</head>
-<body>
-    <h1>CLASES DE PROGRAMADOR</h1>
-    <form>
-        <div id="info">
-            <div>
-                <label>ID</label>
-                <input type="text" id="id">
-            </div>
-            <div>
-                <label>Nombre</label>
-                <input type="text" id="nombre">
-            </div>
-            <div>
-                <label>Descripcion</label>
-                <input type="text" id="descripcion">
-            </div>
-            <div>
-                <label>Precio unidad</label>
-                <input type="text" id="precio">
-            </div>
-            <div>
-                <label>IVA</label>
-                <input type="text" id="iva">
-            </div>
-            <div>
-                <label>Stock</label>
-                <input type="text" id="stock">
-            </div>
-            <div>
-                <label>Stock Minimo</label>
-                <input type="text" id="stockMin">
-            </div>
-            <div>
-                <label>Activo</label>
-                <input type="text" id="activo">
-            </div>
-            <div>
-                <label>Fecha</label>
-                <input type="text" id="fecha">
-            </div>
-        </div>
-        <div id="accion">
-            <button id="bReset" type="button">Borrar Datos</button>
-            <button id="bAgregar" type="button">Agregar producto</button>
-            <button id="bActualizar" type="button">Actualizar producto</button>
-            <button id="bLeer" type="button">Buscar producto</button>
-            <button id="bEliminar" type="button">Eliminar producto</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Objetos del programador</title>
 
+        <link rel="stylesheet" href="/css/objeto-programador.css">
+    </head>
+    <body>
+        <!-- CRUD = Create Read Upload Delete (Crear Actualizar Leer Borrar)-->
+        <!-- no es posible programar sin el uso de funciones, y hoy en dia no hay lenguaje de programacion que no utilice Objetos -->
+        <!-- POO : Programación Orientada a Objetos -->
+        <!-- una clase es un tipo de dato compuesto por otros elementos y pueden ser:
+            - clases intrinsecas o predefinidas (Date, Math, String, etc)
+            - clases del navegador o DOM (Modelo del documento) (window)
+            - clases personalizadas por el programador
+        -->
+        <!-- un objeto a nivel de programacion es una serie de informacion relacionada con un elemento -->
+        <!-- una clase es la modelizacion de un elemento de la vida real, como una plantilla -->
+        <!-- un objeto es una instancia creada a partir de una clase, los objetos se crean a traves del operador new (cada elemento que se crea con una clase es un elemento) -->
+        <!-- un miembro es un objeto creado a partir de una clase y todas las propiedades(datos) y metodos(funciones) de forma generica se llama miembro (los miembros son los componentes de esa clase)
+        pueden ser de tipo:
+            - propiedad - variable (solo almacenan uno y solo un valor)
+            - metodo - funciones(aunque parecen lo mismo no lo son, una funcion se define dentro de un codigo y un metodo se define dentro de una clase)
+            excepto el objeto de tipo windows no son funciones son metodos ej: alert, prompt, etc
+            - herencia, es capaz de crear nuevos objetos a partir de otros objetos, se pueden crear clases hijas a partir de una clase padre -->
+        <!-- CLASES -->
+        <!-- las clases se definen en ficheros independientes, y suelen ir en singular y la primera letra en mayuscula (Libro, Alumno, Coche, etc) 
+        
+            class Identificador{
+                //metodo constructor y resto de miembros de los que consta la clase
+            }
+        -->
+        <!-- una vez definida una clase es posible crear objetos de la misma con el operador new (que llama al metodo constructor) -->
+        <!-- miembros de una clase:
+            - propiedades(variables)
+            - funcion constructora(para inicializar la clase o asignar por primera vez valores a las propiedades)
+            - metodos que pueden ser de tipo getter y setter, se definen como metodos pero se utilizan como variables
 
-        </div>
-    </form>
-    <h2>LISTA DE PRODUCTOS ACTUALES</h2>
-    <div id="lista">
+            class Identificador{
+                //1. Propiedades
+                        (variables o miembros necesarios de la clase)
 
+                //2. Metodo constructor
+                        (jamas devuelven nada, nunca return)
+                        (son invocados a traves del operador new)
 
-    </div>
-    <script src="/scripts/producto.js"></script>
-    <script src="/scripts/objeto-programador.js"></script>
-</body>
+                        constructor(){
+                            (se pueden crear nuevos miembros o reescribir los ya dados)
+                            (con this. se permite acceder a un miembro de la propia clase)
+                        }
+
+                //3. Getter/Setter
+                        (GET - Obtener / Leer)
+                        (SET - Guaradar / Escribir)
+                        //El metodo GET no admite ningún parametro
+                        //El metodo SET admite un unico parametro
+                        //Se definen como metodos y se pueden utilizar como funciones
+                        //Una variable/parametro que solo tiene funcion SET se llama variable de solo escritura
+
+                //4. Otros métodos
+                            (metodos reutilizables durante el código)
+
+            }
+        -->
+        <!-- Operador ? (interrogante)
+                condicion ? (si true) expr1 : ( si false) expr2
+
+                //es lo mismo que:
+                if(condicion){
+                    return expr1;
+                } else {
+                    return expr2;
+                }
+        
+        -->
+
+        <h1>CLASES DEL PROGRAMADOR</h1>
+        <form>
+            <div id="info">
+                <div>
+                    <label>ID</label>
+                    <input type="text" id="id">
+                </div>
+                <div>
+                    <label>Nombre</label>
+                    <input type="text" id="nombre">
+                </div>
+                <div>
+                    <label>Descripción</label>
+                    <input type="text" id="descripcion">
+                </div>
+                <div>
+                    <label>Precio</label>
+                    <input type="text" id="precio">
+                </div>
+                <div>
+                    <label>IVA</label>
+                    <input type="text" id="iva">
+                </div>
+                <div>
+                    <label>Stock</label>
+                    <input type="text" id="stock">
+                </div>
+                <div>
+                    <label>Stock Mínimo</label>
+                    <input type="text" id="stockMin">
+                </div>
+                <div>
+                    <label>Activo</label>
+                    <input type="text" id="activo">
+                </div>
+                <div>
+                    <label>Fecha</label>
+                    <input type="text" id="fecha">
+                </div> 
+            </div>
+            <div id="accion">
+                <!-- los botones pueden ser de tipo reset, submit o button, aqui son de tipo button que no hacen nada -->
+                <button id="bReset" type="button">Borrar Datos</button>
+                <button id="bAgregar" type="button">Agregar Producto</button>
+                <button id="bActualizar" type="button">Actualizar producto</button>
+                <button id="bLeer" type="button">Buscar producto</button>
+                <button id="bEliminar" type="button">Eliminar producto</button>
+            </div>
+        </form>
+        <!-- La clase es una especie de plantilla y con new sacamos un Objeto -->
+        <!-- Miembros de clase o estaticos, son propiedades y metodos que se crean en la clase padre pero no se copian a los Objetos hijos (static)-->
+        <!-- Miembros de instancia, se saca un Objeto-hijo de la clase y cada Objeto tiene su nombre, a eso se le llama miembro de instancia -->
+        <!-- Esto se hace para:
+            - Tener una variable que tenga el mismo valor para todos
+            - Cuando queremos crear un metodo que necesite acceder a las necesidades internas de un Objeto
+        -->
+        <!-- Metodo toString(), coge un objeto y obtiene una representacion en formato texto de ese objeto, si se crea una cadena de texto e introduces un objeto aunque no se ponga el sistema te lo da de entrada como toString() -->
+        <!-- Herencia, se heredad de los ascendentes -->
+        <!-- Todo objeto que se crea en JS se crea de la clase Object (heredan de la clase OBJECT)
+                Object (Class) ==> toString()
+                                - No recibe parametros
+                                 -Devuelve una cadena de texto
+            Todos los metodos tienen el metodo toString()    
+        -->
+        <!-- Redefinir un metodo toString(), se puede hacer en el hijo -->
+        <h2>Lista de productos actuales</h2>
+        <div id="lista"></div>
+        <div id="resultado"></div>
+
+        <!-- es importante el orden en que se introducen los scripts -->
+        <script src="/scripts/producto.js"></script>
+        <script src="/scripts/libro.js"></script>
+        <script src="/scripts/objeto-programador.js"></script>
+    </body>
 </html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Objeto Window</title>
+
+        <link rel="stylesheet" href="/css/window.css">
+    </head>
+    <body>
+        <h1>OBJETO WINDOW</h1>
+        <!-- El objeto window termina representando una ventana o un iframe -->
+        <!-- Window representa el objeto Global de nuestro entorno de programación -->
+        <!-- Miembros Básico 
+            - closed: booleano que indica si una ventana esta cerrada o no (para ventanas emergentes)
+            - console: representa la consola del navegador
+                -log(expr) (registro)
+                -debug(expr) (depuracion)
+                -error(expr) (error)
+                -info(expr) (informacion)
+                -warn(expr) (advertencia)
+                -clear() limpia la consola
+            - document
+            - frames: devuelven un array de los elemento de la ventana actual
+            - lenght:  devuelve el nº de frame-iframe
+            - fullScreen: booleano, de pantalla completa o no (F11)
+            - history: nos permite movernos a traves del historial del navegador
+            - innerHeigth: calcula alto de ventana
+            - innerWidth: calcula ancho de la ventan
+            - outerHeigth: representa la parte exterior de la ventana a lo alto
+            - innerWidth: representa la parte exterior de la ventana a lo ancho
+            - location: devuelve la barra de dirección y navegar entre url
+            - name: permite asignar el nombre de la ventana
+            - navigator: proporciona informacion del navegador
+            - opener: quien me ha abierto en referencia a las ventanas, pero solo abiertas desde JS
+            - pageXOffset o scrollX: para saber si nos hemos desplazado en X en px
+            - pageYOffset o scrollY: para saber si nos hemos desplazado en Y en px
+            - parent: ventana padre
+            - self:
+            -screen: referencia de la pantalla donde estamos trabajando
+            - screen Left o screenX: de la ventana del navegador a la pantalla
+            - screen Left o screenX:
+            - alert
+            - confirm
+            - prompt
+            - print()
+            - focus(): sirve para asignar el foco a un elemento
+            -cleaTimeout: para limpiar(peticionID):
+            - setTimeout: para poner una cuenta atras
+            - clearInterval:
+            - setInterval: crea intervalos, es un reloj, tiene repeticion
+            - close(): cerrar ventanas emergentes
+            - open: abrir ventanas emergentes
+            - moveBy: desplazar una ventana tomando como referencia la posicion actual
+            - moveTo: desplazar una ventana tomando como referencia la pantalla
+            - resizeBy: redimensiona ventanas
+            - resizeTo: redimensiona ventanas
+            - scroll: desplaza la ventana a un lugar determinado
+            - scrollBy
+            - scrollTo
+            - stop(): paraliza la carga de la pagina
+        -->
+        <!-- Eventos
+            - afterprint
+            - beforeprint
+            - load:
+            - beforeunload
+            - unload
+            - error: error en el script
+            - focus: cuando la ventana recibe el foco
+            - blur: cuando la ventana pierde el foco
+        -->
+        <!-- Temporizadores y animaciones, funcionan igual pero tienen diferencias tecnicas a nivel de usuario-->
+        <!-- TEMPORIZADORES O ANIMACIONES -->
+        <!-- Hay dos posibles metodos:
+            - setTimeout(funcCallBack, intervalo) - solo se realiza una vez
+            - setInterval(funcCallBack, intervalo) -se realiza repetitivamente
+        Ambos metodos devuelven una referencia al temporizador que se ha creado y cuya finalidad es comprobar que el temporizador a arrancado o para pararlo     
+        -->
+        <!-- funcCallBack, esta funcion tiene que ser capaz de recoger los datos y no admiten parametros -->
+        <!-- intervalo, en milisegundos -->
+        <!-- Hay dos metodos para parar los temporizadores:
+            - clearTimeout(temporizadorID)
+            - clearInterval(temporizadorID)
+        Ambos reciben como parametro  una referencia al temporizador que tiene que paralizar  
+        -->
+        <!-- Todo lo que se puede hacer con un Interval se puede hacer con un Timeout -->
+     
+        <div id="temporizador">
+            <h2>ANIMACIÓN</h2>
+            <div class="buttons">
+                <input type="button" id="bPlay" value="Play">
+                <input type="button" id="bStop" value="Stop">
+            </div>
+            <div class="panel">
+                <div class="bola" ></div>
+            </div>
+        </div>
+        <div>
+            <button id="bVolver">Volver a Anterior</button>
+        </div>
+        <div>
+            <h2>CALCULAR IVA</h2>
+            <p>
+                <input type="text" id="cantidad" value="0">
+                <input type="button" id="abrirConversor" value="abir conversor">
+            </p>
+            <p>
+                <input type="button" id="calcularIVA" value="Calcular IVA">
+                <input type="text" readonly id="iva" value="0"> 
+            </p>
+        </div>
+
+        <!-- BARRA DE DIRECCION Y EL HISTORIAL -->
+        <!-- El objeto Location (en mayuscula porque es un objeto), representa la barra de direcciones del navegador, y nos permite sacar cada componente por su lado -->
+        <!-- El objeto Window tiene acceso a este elemento a traves de una propiedad location (en minuscula porque es una propiedad)
+            window.location
+        -->
+        <!-- Propiedades de Location
+            (Son solo de tipo lectura, no se pueden modificar)
+            - href: cadena completa de la URL
+            - protocol: es la primera parte de la URL (https:)
+            - host: devuelve el hostname: el puerto
+            - hostname: el host sin el puerto
+            - port: devuelve el numero del puerto
+            - pathname: devuelve la ruta del documento
+            - search: variables de busqueda de la URLdevuelve lo que aparece detrás del interrogante(?))
+            - hash: devuelve todo lo que aparece detrás de una almohadilla(#)
+            - username: nombre del usuario en una pagina cifrada
+            - password: contraseña del usuario en una pagina cifrada
+            - origin: devuelve el origen de la pagina
+        -->
+        <!-- Métodos de Location
+            - assing(url): estoy navegando de una pagina a otra, guarda el historial
+            - replace(url): como el assing, anula la ultima url, por lo tanto, no guarda el historial
+            - reload(): recarga la pagina (F5)
+            - toString(): retorna la URL completa
+
+            Si a la propiedad location se le asigna una cadena de texto navega igual es como el assing
+        -->
+
+        <script src="/scripts/usuario.js"></script>
+        <script src="/scripts/window.js"></script>
+    </body>
+</html>

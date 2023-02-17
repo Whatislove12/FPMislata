@@ -1,52 +1,60 @@
-* {
+*{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     box-sizing: border-box;
 }
 
-h1, h2, h3 {
+h1,h2,h3{
     font-size: 1.75rem;
     text-align: center;
 }
-form {
+
+form{
     width: 800px;
     padding: 20px;
     margin: 30px auto;
     border: 1px solid black;
-    
 }
+
 form #info{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 10px;
-
 }
-form #info>div {
+
+form #info>div{
     width: 32%;
-
 }
-form #info>div>* {
+
+form #info>div>*{
     display: block;
     width: 100%;
 }
 
-#lista {
+#lista{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     column-gap: 2%;
-    flex-wrap: wrap;
     row-gap: 10px;
+    flex-wrap: wrap;
     padding: 20px;
     width: 1000px;
     margin: 20px auto;
 }
+
 #lista>*{
     border: 1px solid black;
     width: calc(96%/3);
     color: blue;
 }
-#lista>*>.sinStock {
+
+#lista h2{
+    font-size: 1.25rem;
+}
+
+#lista>*.sinStock{
     color: red;
 }
+
